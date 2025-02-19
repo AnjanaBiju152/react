@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Register from "./Register";
 import Simpleform from "./Simpleform";
+import FormObject from "./FormObject";
 
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
       </form>
       <Simpleform/>
       <Register />
-
+<FormObject/>
     </>
   )
 }

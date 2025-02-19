@@ -16,12 +16,15 @@ function Simpleform() {
 
     }
     return (
+
         <>
+    {/* seperate state for each inputbox */}
             <h2 style={{ color: 'orange' }}>Simple Form</h2>
             <form action="" onSubmit={handleRegister}>
 
                 <div style={{ marginTop: '20px' }}>
                     <label htmlFor="">First Name</label>
+                    
                     <input type="text"  placeholder ="enter name" onChange={(e) => setFirstName(e.target.value)}
                         style={{ marginLeft: '30px', borderRadius: '5px', padding: '10px', width: '250px' }} />
                 </div>

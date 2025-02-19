@@ -10,26 +10,22 @@ function Register() {
     })
     const registerUser = (e) => {
         e.preventDefault()
-        console.log("inside function");
-        console.log(userData);
-        
+    
 
     }
-    const getUserData = (e) => {
-        console.log(e);
+    const getUserData=(e)=> {
+        console.log(e.target.value);
+        console.log(e.target.name);
         
-        const { name,value } = e.target;
-        console.log(name,value);
         
-        setUserData({ ...userData, [name]: value })
     }
     return (
         <>
-            <h2>Register form</h2>
+            <h2 style={{ color: 'green' }}>Register form</h2>
             <form onSubmit={registerUser}>
                 <label htmlFor="">First Name</label>
-                <input type="text" placeholder="Enter name" name="uName"
-                    style={{ marginLeft: '10px', borderRadius: '5px', padding: '10px', width: '250px' }} onChange={(e) => getUserData(e)} />
+                <input type="text" placeholder="Enter name" name="uName" onChange={(e)=>getUserData(e)}
+                    style={{ marginLeft: '10px', borderRadius: '5px', padding: '10px', width: '250px' }} />
                 <div style={{ marginTop: '20px' }}>
                     <label htmlFor="" style={{ fontSize: '20px' }}>Gender</label>
                     <input type="radio" name="gender" id="" style={{ marginLeft: '20px' }} />
